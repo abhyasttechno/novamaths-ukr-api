@@ -73,22 +73,8 @@ if firebase_app:
 
 
 app = Flask(__name__)
+CORS(app, resources={r"/solve-math": {"origins": "*"}, r"/clarify-step": {"origins": "*"},r"/practice": {"origins": "*"},r"/ama": {"origins": "*"},r"/check": {"origins": "*"},r"/refresher": {"origins": "*"},r"/submit-feedback": {"origins": "*"}})
 
-allowed_origins = [
-    "http://ukr.novamaths.site",
-    "https://ukr.novamaths.site"
-]
-
-# Initialize CORS with the allowed origins for each specific endpoint
-CORS(app, resources={
-    r"/solve-math": {"origins": allowed_origins},
-    r"/clarify-step": {"origins": allowed_origins},
-    r"/practice": {"origins": allowed_origins},
-    r"/ama": {"origins": allowed_origins},
-    r"/check": {"origins": allowed_origins},
-    r"/refresher": {"origins": allowed_origins},
-    r"/submit-feedback": {"origins": allowed_origins}
-})
 
 
 # --- IMPORTANT: Use environment variables for API keys in production ---
