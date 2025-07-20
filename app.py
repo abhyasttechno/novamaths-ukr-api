@@ -99,7 +99,7 @@ else:
 
 # --- Model Configuration ---
 # Choose a model appropriate for the task (multimodal if handling files)
-MODEL_NAME = "gemini-2.5-flash" # Changed to 1.5 flash - good balance
+MODEL_NAME = "gemini-2.5-pro" # Changed to 1.5 flash - good balance
 # Send a creative prompt to the LLM
 
 def call_gemini(prompt):
